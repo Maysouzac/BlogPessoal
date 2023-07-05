@@ -19,6 +19,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+
+// responssavel por sobreescrecer a estrutura padrão do acesso
 public class BasicSecurityConfig {
 
     @Autowired
@@ -57,7 +59,9 @@ public class BasicSecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().csrf().disable()
                 .cors();
-
+        
+        //esta é a camada que realmente bloqueia o acesso ou libera onde o usuario consegue
+        //acessar ou não
         http
                 .authorizeHttpRequests((auth) -> auth
                         .requestMatchers("/usuarios/logar").permitAll()

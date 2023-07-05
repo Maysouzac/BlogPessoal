@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.generation.blogpessoal.model.Usuario;
 
+// vamos preencher as informações do nosso usuario (informa como vamos acessar)
 public class UserDetailsImpl implements UserDetails {
 
 	private static final long serialVersionUID = 1L;

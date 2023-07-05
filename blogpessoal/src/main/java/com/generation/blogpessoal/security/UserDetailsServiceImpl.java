@@ -14,6 +14,9 @@ import com.generation.blogpessoal.model.Usuario;
 import com.generation.blogpessoal.repository.UsuarioRepository;
 
 @Service
+
+//esta fazendo a busca/verificação do banco de dados e se o usuario(apenas usuario)
+// esta presente (ou não) e retornar a resposta
 public class UserDetailsServiceImpl implements UserDetailsService {
 	
 	@Autowired
